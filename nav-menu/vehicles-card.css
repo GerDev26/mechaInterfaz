@@ -1,0 +1,93 @@
+.vehicle-card{
+    background-color: var(--azul-primario);
+}
+.vehicle-card:hover{
+    box-shadow: 5px 5px 10px var(--rojo-primario);
+}
+.vehicle-card-image{
+    width: 100%;
+    height: 60%;
+    padding-top: 3vh;
+    background-color: var(--azul-primario);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vehicle-card-image img{
+    width: 95%;
+    height: auto;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+.vehicle-card-model{
+    background-color: var(--rojo-primario);
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    padding: 5px;
+}
+.vehicle-card-brand{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: var(--blanco-primario);
+    background-color: var(--rojo-primario);
+    padding: 5px 15px;
+    border-radius: 0px 0px 10px 10px;
+}
+.vehicle-card-show-info{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--rojo-primario);
+    color: var(--blanco-primario);
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+    font-size:larger;
+    transition: all 150ms ease-in-out;
+}
+.vehicle-card-show-info:hover{
+    background-color: var(--blanco-primario);
+    color: var(--rojo-primario);
+}
+.vehicle-card-year{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--rojo-primario);
+    color: var(--blanco-primario);
+    padding: 10px;
+    border-radius: 20px 0px 0px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.vehicle-card-cc{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rojo-primario);
+    color: var(--blanco-primario);
+    padding: 10px;
+    border-radius: 0px 20px 0px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.vehicle-card-button{
+    top: 0;
+    max-width: 45px;
+    max-height: 45px;
+    background-color: var(--rojo-primario);
+    color: var(--blanco-primario);
+    transition: all 150ms ease-in-out;
+}
+.vehicle-card-button svg{
+    width: 100%;
+    height: auto;
+}
+.vehicle-card-button:hover{
+    background-color: var(--blanco-primario);
+    color: var(--rojo-primario);
+}

@@ -1,0 +1,100 @@
+.new-person{
+    width: 70vw;
+    height: 80vh;
+    border: none;
+    padding: 25px;
+    position: relative;
+    border-radius: 5px;
+}
+.new-tittle{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.new-photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.new-close-button{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--blanco-primario);
+    background-color: red;
+    border-radius: 0px 0px 0px 12px;
+    transition: all 150ms ease-in-out;
+}
+.new-close-button:hover{
+    color: red;
+    background-color: var(--blanco-primario);;
+}
+.new-close-button svg{
+    width: 100%;
+    height: auto;
+}
+.new-form-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    gap: 35px;
+    background-color: blue;
+}
+.new-input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    background-color: red;
+}
+.new-input-desc {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 5;
+    transition: all 150ms ease-in-out;
+    font-size: large;
+    width: 90%;
+    height: 90%;
+    color: black;
+}
+.new-input-text {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid var(--blanco-primario);
+    background-color: transparent;
+    font-size: large;
+    color: var(--blanco-primario);
+}
+.new-input-text:not(:placeholder-shown)+ .new-input-desc {
+  top: -20px;
+  left: -8px;
+  z-index: 10;
+  font-size: medium;
+  font-weight: 100;
+}
+.new-input-text:focus + .new-input-desc{
+    top: -20px;
+    left: 0px;
+    font-size: medium;
+}
+.new-submit-button{
+    width: 100px;
+    height: 20px;
+}

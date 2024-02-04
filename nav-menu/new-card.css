@@ -1,0 +1,13 @@
+.new-card{
+    background-color: var(--azul-primario);
+}
+.new-card-button{
+    width: 100%;
+    height: 100%;
+}
+.new-card-button svg{
+    color: var(--blanco-primario);
+    border-radius: 25%;
+    width: 80%;
+    height: auto;
+}

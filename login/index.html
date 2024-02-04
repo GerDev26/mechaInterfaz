@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="my-vars.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>LogIn</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        .login-background{
+            background: rgba(39,55,93,1);
+            background: -moz-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(39,55,93,1)), color-stop(100%, rgba(195,95,55,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: linear-gradient(135deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27375d', endColorstr='#c35f37', GradientType=1 );
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            position: absolute;
+        }
+        .login-container{
+            position: relative;
+            box-sizing: border-box;
+            width: 70vh;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.438);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px
+        }
+        .login-input-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            height: 35px;
+            width: 90%;
+        }
+        .login-input-icon{
+            width: 25px;
+            color: var(--blanco-primario);
+            position: absolute;
+            left: 0;
+        }
+        .login-input-desc {
+            position: absolute;
+            left: 40px;
+            top: 8px;
+            transition: bottom 0.3s ease-in-out;
+            z-index: 5;
+            transition: all 150ms ease-in-out;
+            font-size: large;
+            width: 90%;
+            height: 90%;
+            color: var(--blanco-primario);
+        }
+        .login-input-text {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-left: 45px;
+            border-radius: 2px;
+            border: none;
+            border-bottom: 3px solid var(--blanco-primario);
+            background-color: transparent;
+            font-size: large;
+            color: var(--blanco-primario);
+        }
+        .login-input-text:not(:placeholder-shown)+ .login-input-desc {
+          top: -20px;
+          left: -8px;
+          z-index: 10;
+          font-size: medium;
+          font-weight: 100;
+        }
+        .login-input-text:focus + .login-input-desc{
+            top: -20px;
+            left: -8px;
+            font-size: medium;
+        }
+        .login-input-text:focus + .login-input-icon{
+            opacity: 0;
+        }
+        .login-button{
+            display: block;
+            background-color: var(--rojo-secundario);
+            margin-top: 20px;
+            padding: 10px 30px;
+            width: 100%;
+            border-radius: 10px;
+            color: var(--blanco-primario);
+            transition: all 150ms ease-in-out;
+            background: rgba(39,55,93,1);
+            background: -moz-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(39,55,93,1)), color-stop(100%, rgba(195,95,55,1)));
+            background: -webkit-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -o-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: -ms-linear-gradient(-45deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            background: linear-gradient(135deg, rgba(39,55,93,1) 0%, rgba(195,95,55,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27375d', endColorstr='#c35f37', GradientType=1 );
+        }
+        .login-button:hover{
+            background-color: var(--azul-primario);
+        }
+        .login-logo{
+            width: 100%;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.925);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .login-logo img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-background"> </div>
+    <section class="login-container">
+        <div class="login-logo" ><img src="mecha.png" alt="asd"></div>
+        <div class="login-input-container">
+            <input class="login-input-text" id="user" type="text" placeholder=" ">
+            <label class="login-input-desc" for="user">Usuario</label>
+            <svg class="login-input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>  
+        </div>
+        <div class="login-input-container">
+            <input class="login-input-text" id="pass" type="password" placeholder=" ">
+            <label class="login-input-desc" for="pass">Contraseña</label>
+            <svg class="login-input-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+        </div>
+        <button class="login-button">LOGIN</button>
+    </section>
+</body>
+</html>
