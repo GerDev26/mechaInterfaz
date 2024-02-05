@@ -11,3 +11,24 @@ openModalBtn.addEventListener('click', () => {
 closeModalBtn.addEventListener('click', () => {
     myModal.close();
 });
+
+//GPT
+
+document.addEventListener('DOMContentLoaded', function () {
+    const inputPhoto = document.querySelector('.new-photo');
+
+    inputPhoto.addEventListener('change', function () {
+      const file = inputPhoto.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const photoPreview = document.querySelector('.new-photo');
+          photoPreview.style.backgroundImage = `url('${e.target.result}')`;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    });
+  });
