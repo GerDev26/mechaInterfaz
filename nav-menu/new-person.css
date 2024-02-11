@@ -1,13 +1,17 @@
 .new-person{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-sizing: border-box;
     width: 50vw;
     min-width: 600px;
     min-height: 400px;
     border: none;
     padding: 30px;
-    position: relative;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
+    animation: animarModal 200ms ease forwards;
 }
 .new-tittle{
     font-size: 40px;
@@ -130,4 +134,15 @@
     top: -20px;
     left: 0px;
     font-size: medium;
+}
+
+@keyframes animarModal {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(none);
+    }
 }

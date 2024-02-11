@@ -161,9 +161,8 @@
         </article>
     </section>
 
-    <dialog id="new-person-modal" class="new-person">
-        <div>
-            <form action="" method="post" enctype="multipart/form-data">
+    <div class="new-person hidden">
+        <form action="" method="post" enctype="multipart/form-data">
             <p class="new-tittle">INGRESAR USUARIO</p>
             <div class="input-image-container">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -172,51 +171,50 @@
                 <label for="photo"></label>
                 <input class="input-image" type="file">
             </div>
-            <button id="close-new-person" class="new-close-button">
+            <button class="new-close-button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </button>
-                <div class="new-form-container">
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="name" type="text" placeholder=" ">
-                        <label class="new-input-desc" for="name">Nombre</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="surname" type="text" placeholder=" ">
-                        <label class="new-input-desc" for="surname">Apellido</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="email" type="email" placeholder=" ">
-                        <label class="new-input-desc" for="email">E-mail</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="phone" type="number" placeholder=" ">
-                        <label class="new-input-desc" for="phone">Telefono</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="DNI" type="number" placeholder=" ">
-                        <label class="new-input-desc" for="DNI">DNI</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="birthday" type="date" placeholder=" ">
-                        <label class="new-input-desc" for="birthday">Fecha de nacimiento</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="adress" type="text" placeholder=" ">
-                        <label class="new-input-desc" for="adress">Direccion</label>
-                    </div>
-                    <div class="new-input-container">
-                        <input class="new-input-text" id="locality" type="text" placeholder=" ">
-                        <label class="new-input-desc" for="locality">Localidad</label>
-                    </div>
+            <div class="new-form-container">
+                <div class="new-input-container">
+                    <input class="new-input-text" id="name" type="text" placeholder=" ">
+                    <label class="new-input-desc" for="name">Nombre</label>
                 </div>
-                <button class="new-submit-button">
-                     Ingresar 
-                </button>
-                </form>
-        </div>
-    </dialog>
-    <script src="new-person.js"></script>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="surname" type="text" placeholder=" ">
+                    <label class="new-input-desc" for="surname">Apellido</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="email" type="email" placeholder=" ">
+                    <label class="new-input-desc" for="email">E-mail</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="phone" type="number" placeholder=" ">
+                    <label class="new-input-desc" for="phone">Telefono</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="DNI" type="number" placeholder=" ">
+                    <label class="new-input-desc" for="DNI">DNI</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="birthday" type="date" placeholder=" ">
+                    <label class="new-input-desc" for="birthday">Fecha de nacimiento</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="adress" type="text" placeholder=" ">
+                    <label class="new-input-desc" for="adress">Direccion</label>
+                </div>
+                <div class="new-input-container">
+                    <input class="new-input-text" id="locality" type="text" placeholder=" ">
+                    <label class="new-input-desc" for="locality">Localidad</label>
+                </div>
+            </div>
+            <button class="new-submit-button">
+                 Ingresar 
+            </button>
+        </form>
+    </div>
+    <script src="openCloseModal.js"></script>
 </body>
 </html>
