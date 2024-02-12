@@ -1,0 +1,29 @@
+@keyframes desplazamientoInferior {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(none);
+    }
+}
+
+.desplazamientoInferior{
+    animation: desplazamientoInferior 150ms ease-in-out;
+}
+
+@keyframes desplazamientoSuperior {
+    0% {
+        opacity: 1;
+        transform: translateX(none);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.desplazamientoSuperior{
+    animation: desplazamientoSuperior 150ms ease-in-out;
+}

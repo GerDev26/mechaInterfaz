@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="my-vars.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="left-nav.css">
-    <link rel="stylesheet" href="top-nav.css">
-    <link rel="stylesheet" href="vehicles-card.css">
-    <link rel="stylesheet" href="clients-card.css">
-    <link rel="stylesheet" href="new-card.css">
-    <link rel="stylesheet" href="new-person.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/left-nav.css">
+    <link rel="stylesheet" href="css/top-nav.css">
+    <link rel="stylesheet" href="css/vehicles-card.css">
+    <link rel="stylesheet" href="css/clients-card.css">
+    <link rel="stylesheet" href="css/new-card.css">
+    <link rel="stylesheet" href="css/new-person.css">
     <title>home</title>
 </head>
 <body class="home">
@@ -40,7 +40,7 @@
             <li class="top-nav-item">Germán26</li>
             <li class="top-nav-item">
                 <a href="">
-                    <img src="yo.png" alt="">
+                    <img src="img/yo.png" alt="">
                 </a>
             </li>
             <li class="top-nav-item">
@@ -57,7 +57,7 @@
         <ul class="left-nav-list">
             
             <li class="left-nav-logo">
-                <img src="mecha.png" alt="Logotipo">
+                <img src="img/mecha.png" alt="Logotipo">
             </li>
 
             <li class="left-nav-item">
@@ -105,7 +105,7 @@
 
     <section class="list-container">
         <article class="new-card">
-            <button class="new-card-button" id="open-new-person">
+            <button class="new-card-button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
@@ -124,7 +124,7 @@
             </button>
             
             <div class="client-color"> </div>
-            <img class="client-card-photo" src="yo.png" alt="">
+            <img class="client-card-photo" src="img/yo.png" alt="">
             <div class="client-card-info">
                 <p class="client-card-name">German Canteros</p>
                 <p class="client-card-email">germancanteros26@gmail.com</p>
@@ -177,37 +177,37 @@
                 </svg>
             </button>
             <div class="new-form-container">
-                <div class="new-input-container">
-                    <input class="new-input-text" id="name" type="text" placeholder=" ">
-                    <label class="new-input-desc" for="name">Nombre</label>
+                <div class="input-container">
+                    <input class="input-text" id="name" type="text" placeholder=" ">
+                    <label class="input-label" for="name">Nombre</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="surname" type="text" placeholder=" ">
-                    <label class="new-input-desc" for="surname">Apellido</label>
+                <div class="input-container">
+                    <input class="input-text" id="surname" type="text" placeholder=" ">
+                    <label class="input-label" for="surname">Apellido</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="email" type="email" placeholder=" ">
-                    <label class="new-input-desc" for="email">E-mail</label>
+                <div class="input-container">
+                    <input class="input-text" id="email" type="email" placeholder=" ">
+                    <label class="input-label" for="email">E-mail</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="phone" type="number" placeholder=" ">
-                    <label class="new-input-desc" for="phone">Telefono</label>
+                <div class="input-container">
+                    <input class="input-text" id="phone" type="number" placeholder=" ">
+                    <label class="input-label" for="phone">Telefono</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="DNI" type="number" placeholder=" ">
-                    <label class="new-input-desc" for="DNI">DNI</label>
+                <div class="input-container">
+                    <input class="input-text" id="DNI" type="number" placeholder=" ">
+                    <label class="input-label" for="DNI">DNI</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="birthday" type="date" placeholder=" ">
-                    <label class="new-input-desc" for="birthday">Fecha de nacimiento</label>
+                <div class="input-container">
+                    <input class="input-text" id="birthday" type="date" placeholder=" ">
+                    <label class="input-label" for="birthday">Fecha de nacimiento</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="adress" type="text" placeholder=" ">
-                    <label class="new-input-desc" for="adress">Direccion</label>
+                <div class="input-container">
+                    <input class="input-text" id="adress" type="text" placeholder=" ">
+                    <label class="input-label" for="adress">Direccion</label>
                 </div>
-                <div class="new-input-container">
-                    <input class="new-input-text" id="locality" type="text" placeholder=" ">
-                    <label class="new-input-desc" for="locality">Localidad</label>
+                <div class="input-container">
+                    <input class="input-text" id="locality" type="text" placeholder=" ">
+                    <label class="input-label" for="locality">Localidad</label>
                 </div>
             </div>
             <button class="new-submit-button">
@@ -215,6 +215,6 @@
             </button>
         </form>
     </div>
-    <script src="openCloseModal.js"></script>
+    <script src="js/openCloseModal.js"></script>
 </body>
 </html>

@@ -1,0 +1,176 @@
+:root{
+    /* Neutros */
+
+    /* Blancos */
+    --blanco-primario: #ffffff;
+    --blanco-secundario: #dbdbdb;
+
+    /* Negros */
+
+
+    /* Azules */
+    --azul-primario: #293963;
+    --azul-secundario: #294C63;
+    --azul-terciario: #2B2963;
+    /*  Rojos */
+    --rojo-primario: #CA4348;
+    --rojo-secundario: #C95942;
+    --rojo-terciario: #C97042;
+
+    /* Tamaño de Fuente */
+
+    
+}
+
+/* Clases Generales */
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+}
+.input-label {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 5;
+    transition: all 150ms ease-in-out;
+    font-size: large;
+    width: 90%;
+    height: 90%;
+    color: black;
+}
+.input-text {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 45px;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: transparent;
+    font-size: large;
+    color: black
+}
+.input-text:not(:placeholder-shown)+ .input-label {
+  top: -20px;
+  left: -8px;
+  z-index: 10;
+  font-size: medium;
+  font-weight: 100;
+}
+.input-text:focus + .input-label{
+    top: -20px;
+    left: -8px;
+    font-size: medium;
+}
+.input-text:focus + .login-input-icon{
+    opacity: 0;
+}
+
+.tec-list{
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.tec-container{
+    max-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+}
+.tec-check-container{
+    position: relative;
+}
+.tec-check{
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    display: flex;
+}
+.tec-check-image{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    color: white;
+    width: 100%;
+}
+
+.hidden{
+    display: none;
+}
+
+/* Normalizar css */
+
+body{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+ul, li{
+    list-style: none;   
+}
+a {
+    color: inherit; /* Esto hereda el color del texto de su elemento padre */
+    text-decoration: none; /* Esto elimina el subrayado predeterminado de los enlaces */
+  }
+  
+  /* Si deseas cambiar el color a algo específico, puedes hacer lo siguiente: */
+  a {
+    color: white; /* Cambia #ff0000 al color que desees */
+    text-decoration: none;
+  }
+button{
+    border: none;
+    background-color: transparent;
+}
+input{
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+select {
+    appearance: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+}
+/* Quitar los estilos predeterminados del fieldset */
+fieldset {
+  margin: 0; /* Eliminar el margen predeterminado */
+  padding: 0; /* Eliminar el relleno predeterminado */
+  border: none; /* Eliminar el borde predeterminado */
+}
+  
+/* Si deseas quitar también los estilos del legend dentro del fieldset */
+fieldset legend {
+  display: none; /* Ocultar el legend */
+}
+  
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none; /* Para navegadores Firefox */
+    width: 20px; /* Ancho personalizado */
+    height: 20px; /* Altura personalizada */
+    outline: none; /* Eliminar el contorno predeterminado */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  }
+
+  /* Estilos para el marcado cuando está seleccionado */
+  input[type="checkbox"]:checked {
+    background-color: transparent; /* Cambiar el color de fondo cuando está seleccionado */
+  }
